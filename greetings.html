@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!!</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            /* background-color: black;
+            color: white; */
+        }
+
+        header::before {
+            background: url('CSS/images/glitters.jpg') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        /* .navbar {
+            background-color: rgb(8, 65, 99);
+        }
+
+        .navigation {
+            font-size: 20px;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #19c8c8;
+        } */
+
+        section {
+            height: 450px;
+            margin: 3px 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #h-primary {
+            padding: 15px 23px;
+            font-size: 4rem;
+            background-image: linear-gradient(#a1d6f5,rgb(13, 55, 146));
+            border: 2px solid #00ffe2;
+            border-radius: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            opacity: 1.0;
+        }
+
+        #para{
+          background-image: linear-gradient(rgb(160, 248, 248),rgb(127, 49, 190));
+            border: 2px solid #00ffe2;
+            border-radius: 10px;
+            margin: 23px 34px;
+            padding: 10px 34px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        #btn {
+            margin: 23px 34px;
+            padding: 5px 15px;
+           background-image: linear-gradient(rgb(151, 252, 35),#008000);
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #00ffe2;
+            border-radius: 8px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- <nav class="navbar">
+            <ul class="navigation">
+                <li class="item"><a href="#">Home</a> </li>
+                <li class="item"><a href="#">About us</a></li>
+                <li class="item"><a href="#">Services</a></li>
+                <li class="item"><a href="#">Contact us</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <section>
+        <h1 id="h-primary">Hello there!! Greetings!!</h1>
+        <p id="para">Sometimes we’re tested not to show our weaknesses, but to discover our strengths. </p>
+        <button id="btn"
+            onclick="myfunc()">Click
+            here</button>
+    </section>
+</body>
+<script>
+    let person = prompt("Enter your name", "User")
+    if (person != null) {
+        document.getElementById('h-primary').innerHTML = "Hey " + person + "!!" +" Lets get some Motivation!!";
+    }
+    function myfunc(){
+        document.getElementById('para').innerHTML='Have a great day!!'
+    }
+</script>
+
+</html>
